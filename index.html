@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فلس — مستشارك المالي الذكي</title>
+    <meta name="description"
+        content="فلس تطبيق الميزانية الذكي المبني على منهجية الصفر. يقرأ رسائل البنك تلقائياً، يصنف مصاريفك بالذكاء الاصطناعي، ويكتشف اشتراكاتك المخفية.">
+    <meta name="keywords" content="تطبيق ميزانية, إدارة المصاريف, ذكاء اصطناعي, فلس, ميزانية الصفر">
+    <meta name="theme-color" content="#4F7A91">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" aria-label="فلس">
+                <img src="images/logo.svg" alt="فلس" class="nav__logo-img">
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#features" class="nav__link">المميزات</a></li>
+                <li><a href="#how-it-works" class="nav__link">كيف يعمل</a></li>
+                <li><a href="#ai" class="nav__link">الذكاء الاصطناعي</a></li>
+                <li><a href="#download" class="nav__link nav__link--cta">حمّل التطبيق</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="فتح القائمة">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg-shapes">
+            <div class="hero__circle hero__circle--1"></div>
+            <div class="hero__circle hero__circle--2"></div>
+            <div class="hero__circle hero__circle--3"></div>
+        </div>
+        <div class="hero__content container">
+            <div class="hero__text">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    مدعوم بالذكاء الاصطناعي
+                </div>
+                <h1 class="hero__title">
+                    كل <span class="hero__title--accent">فلس</span> له قيمة.
+                    <br>دعنا نثبت لك ذلك.
+                </h1>
+                <p class="hero__subtitle">
+                    تطبيق الإدارة المالية الشخصية الذكي المبني على منهجية ميزانية الصِفر.
+                    يقرأ رسائلك البنكية تلقائياً، يصنّف مصاريفك، ويمنحك تقارير ذكية لاتخاذ قرارات مالية أفضل.
+                </p>
+                <div class="hero__actions">
+                    <a href="#download" class="btn btn--primary">
+                        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        حمّل مجاناً
+                    </a>
+                    <a href="#features" class="btn btn--outline">
+                        اكتشف المميزات
+                        <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12" />
+                            <polyline points="12 19 5 12 12 5" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <div class="hero__stat-icon-wrap hero__stat-icon-wrap--blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div class="hero__stat-info">
+                            <span class="hero__stat-value">مجاني ١٠٠٪</span>
+                            <span class="hero__stat-label">بدون أي رسوم مخفية</span>
+                        </div>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-icon-wrap hero__stat-icon-wrap--green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="hero__stat-info">
+                            <span class="hero__stat-value">أقل من ٢ ثانية</span>
+                            <span class="hero__stat-label">لتصنيف كل معاملة</span>
+                        </div>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat">
+                        <div class="hero__stat-icon-wrap hero__stat-icon-wrap--teal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="hero__stat-info">
+                            <span class="hero__stat-value">خصوصية تامة</span>
+                            <span class="hero__stat-label">بياناتك مشفّرة ومحمية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__phone-wrapper">
+                    <div class="hero__phone-glow"></div>
+                    <img src="images/mockup-hero.svg" alt="واجهة تطبيق فلس" class="hero__phone-img">
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span>اكتشف المزيد</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-header__tag">المميزات</span>
+                <h2 class="section-header__title">كل ما تحتاجه<br>لإدارة أموالك بذكاء</h2>
+                <p class="section-header__desc">ميزات مصممة خصيصاً للمستخدم العربي، تعمل بسلاسة مع حساباتك البنكية
+                    المحلية.</p>
+            </div>
+            <div class="features__grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-card__icon feature-card__icon--blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            <path d="M8 9h8M8 13h4" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">قراءة الرسائل البنكية</h3>
+                    <p class="feature-card__desc">يقرأ رسائل SMS البنكية تلقائياً ويحوّلها إلى معاملات مالية منظمة بدون
+                        أي إدخال يدوي.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card__icon feature-card__icon--green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">تصنيف ذكي بالـ AI</h3>
+                    <p class="feature-card__desc">الذكاء الاصطناعي يتعلم من عاداتك ويصنّف كل معاملة تلقائياً — مطاعم،
+                        بقالة، مواصلات والمزيد.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card__icon feature-card__icon--teal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">ميزانية الصِفر</h3>
+                    <p class="feature-card__desc">كل ريال له وظيفة. وزّع دخلك على فئات محددة وتابع إنفاقك لحظة بلحظة
+                        بمنهجية مثبتة علمياً.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card__icon feature-card__icon--mint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                            <path d="M12 8v4l3 3" />
+                            <path d="M16.24 7.76l1.42-1.42" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">كشف الاشتراكات</h3>
+                    <p class="feature-card__desc">اكتشف اشتراكاتك المنسية. فلس يحلل أنماط الدفع ويُنبّهك قبل موعد
+                        التجديد لتوفّر أموالك.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card__icon feature-card__icon--warm">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">تقارير مالية ذكية</h3>
+                    <p class="feature-card__desc">تقارير شهرية بأسلوب سردي مفهوم — ليست مجرد أرقام، بل نصائح حقيقية
+                        لتحسين وضعك المالي.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card__icon feature-card__icon--purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">خصوصية مطلقة</h3>
+                    <p class="feature-card__desc">بياناتك المالية مشفّرة ومحمية. لا نخزّن رسائلك الأصلية بعد التحليل —
+                        خصوصيتك أولويتنا.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-header__tag">كيف يعمل</span>
+                <h2 class="section-header__title">ثلاث خطوات بسيطة<br>لحياة مالية أفضل</h2>
+            </div>
+            <div class="steps">
+                <div class="step" data-aos="fade-left">
+                    <div class="step__number">١</div>
+                    <div class="step__content">
+                        <h3 class="step__title">سجّل وأنشئ حساباتك</h3>
+                        <p class="step__desc">أضف حساباتك البنكية والمحافظ الإلكترونية. فلس يدعم جميع البنوك السعودية.
+                        </p>
+                    </div>
+                    <div class="step__line"></div>
+                </div>
+                <div class="step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step__number">٢</div>
+                    <div class="step__content">
+                        <h3 class="step__title">وزّع ميزانيتك</h3>
+                        <p class="step__desc">حدد فئات الإنفاق ووزّع دخلك عليها. الذكاء الاصطناعي يساعدك في التوزيع
+                            الأمثل بناءً على عاداتك.</p>
+                    </div>
+                    <div class="step__line"></div>
+                </div>
+                <div class="step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="step__number">٣</div>
+                    <div class="step__content">
+                        <h3 class="step__title">استرخِ وراقب</h3>
+                        <p class="step__desc">فلس يتتبع مصاريفك تلقائياً من الرسائل البنكية ويُنبّهك إذا اقتربت من حدود
+                            الميزانية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AI SHOWCASE ===== -->
+    <section class="ai-showcase" id="ai">
+        <div class="container">
+            <div class="ai-showcase__wrapper">
+                <div class="ai-showcase__visual">
+                    <div class="ai-showcase__phone-wrapper">
+                        <div class="ai-showcase__glow"></div>
+                        <img src="images/mockup-ai.svg" alt="مستشار فلس المالي الذكي" class="ai-showcase__phone-img">
+                    </div>
+                </div>
+                <div class="ai-showcase__content">
+                    <span class="section-header__tag">قادم قريباً</span>
+                    <h2 class="ai-showcase__title">مستشارك المالي<br>في جيبك</h2>
+                    <p class="ai-showcase__desc">
+                        نعمل على تطوير مستشار مالي ذكي يدردش معك ويحلل بياناتك الحقيقية.
+                        سيقدم لك نصائح مالية مخصصة واقتراحات عملية لتحسين وضعك المالي.
+                    </p>
+                    <ul class="ai-showcase__list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            تحليل ذكي لأنماط الإنفاق الشهرية
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            نصائح مخصصة لتقليل المصاريف
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            تقارير سردية بلغة عربية واضحة
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            تنبيهات استباقية قبل نفاد الميزانية
+                        </li>
+                    </ul>
+                    <div class="coming-soon-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        قادم قريباً — نعمل عليه الآن
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUBSCRIPTION SECTION ===== -->
+    <section class="subscriptions" id="subscriptions">
+        <div class="container">
+            <div class="subscriptions__wrapper">
+                <div class="subscriptions__content">
+                    <span class="section-header__tag">مدير الاشتراكات</span>
+                    <h2 class="subscriptions__title">اشتراكاتك المنسية<br>تكلّفك أكثر مما تظن</h2>
+                    <p class="subscriptions__desc">
+                        فلس يراقب حركاتك المالية ويكتشف الاشتراكات المتكررة التي ربما نسيتها.
+                        يُنبّهك قبل التجديد ويساعدك على اتخاذ قرار بالإلغاء أو الاستمرار.
+                    </p>
+                    <div class="subscriptions__savings-box">
+                        <div class="subscriptions__savings-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>وفّر حتى ٣٠٪ من اشتراكاتك</strong>
+                            <span>بكشف الاشتراكات المخفية والمكررة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscriptions__visual">
+                    <div class="subscriptions__phone-wrapper">
+                        <img src="images/mockup-subscriptions.svg" alt="إدارة الاشتراكات"
+                            class="subscriptions__phone-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA / DOWNLOAD ===== -->
+    <section class="cta" id="download">
+        <div class="cta__bg-shapes">
+            <div class="cta__circle cta__circle--1"></div>
+            <div class="cta__circle cta__circle--2"></div>
+        </div>
+        <div class="container">
+            <div class="cta__content">
+                <img src="images/logo.svg" alt="فلس" class="cta__logo">
+                <h2 class="cta__title">ابدأ رحلتك المالية<br>مع فلس الآن</h2>
+                <p class="cta__desc">حمّل التطبيق مجاناً وابدأ بإدارة أموالك بشكل أذكى. كل فلس يستحق أن يُحسب.</p>
+                <div class="cta__buttons">
+                    <a href="#" class="store-badge" aria-label="حمّل من App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        <div>
+                            <small>حمّل من</small>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="store-badge" aria-label="حمّل من Google Play">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                            <path
+                                d="M3.18 23.67c-.3-.18-.55-.52-.55-.97V1.3c0-.45.25-.79.55-.97l11.25 11.67L3.18 23.67zM15.47 13.05L5.08 23.44l12.85-7.2-2.46-3.19zm2.93-1.62l-2.19 1.24L18.68 16l3.34-1.87c.6-.34.6-.89 0-1.23l-3.62-2.47zM5.08.56l10.39 10.4 2.46-2.55L5.08.56z" />
+                        </svg>
+                        <div>
+                            <small>حمّل من</small>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="images/logo.svg" alt="فلس" class="footer__logo">
+                    <p class="footer__tagline">مستشارك المالي الذكي</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                    <a href="mailto:support@fils.app">الدعم الفني</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© ٢٠٢٦ فلس. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

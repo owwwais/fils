@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 820" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#3B5F73" flood-opacity="0.1" />
+    </filter>
+    <linearGradient id="primaryGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F7A91" />
+      <stop offset="100%" stop-color="#89BEA8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Phone frame -->
+  <rect x="15" y="15" width="370" height="790" rx="45" fill="#F8FAFC" stroke="#FFFFFF" stroke-width="6" filter="url(#shadow)" />
+  <rect x="14" y="14" width="372" height="792" rx="46" fill="none" stroke="#E2E8F0" stroke-width="2" />
+  
+  <!-- Dynamic Island -->
+  <rect x="135" y="30" width="130" height="30" rx="15" fill="#0F1923" />
+  
+  <g transform="translate(0, 100)">
+    <rect x="35" y="0" width="120" height="18" rx="5" fill="#1A2B3C" />
+    <!-- Tabs -->
+    <rect x="35" y="40" width="330" height="44" rx="22" fill="#E2E8F0" />
+    <rect x="40" y="45" width="160" height="34" rx="17" fill="#FFFFFF" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.05))" />
+    <rect x="90" y="58" width="60" height="8" rx="4" fill="#3B5F73" />
+    <rect x="240" y="58" width="60" height="8" rx="4" fill="#94A3B8" />
+  </g>
+
+  <!-- Subscriptions List -->
+  <g transform="translate(0, 220)">
+    
+    <!-- Item 1 (Slide up & fade in) -->
+    <g opacity="0">
+      <rect x="35" y="0" width="330" height="80" rx="16" fill="#FFFFFF" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.03))" />
+      <rect x="55" y="15" width="50" height="50" rx="12" fill="#3B5F73" opacity="0.1" />
+      <!-- Logo placeholder -->
+      <path d="M70 40 L90 40 L80 25 Z" fill="#3B5F73" />
+      
+      <rect x="120" y="25" width="80" height="10" rx="5" fill="#1A2B3C" />
+      <rect x="120" y="45" width="50" height="6" rx="3" fill="#94A3B8" />
+      
+      <rect x="290" y="25" width="50" height="12" rx="6" fill="#1A2B3C" />
+      
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.4s" fill="freeze" />
+      <animate attributeName="transform" values="translate(0, 40); translate(0, 0)" dur="0.6s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+    </g>
+
+    <!-- Item 2 -->
+    <g opacity="0">
+      <rect x="35" y="95" width="330" height="80" rx="16" fill="#FFFFFF" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.03))" />
+      <rect x="55" y="110" width="50" height="50" rx="12" fill="#89BEA8" opacity="0.2" />
+      <!-- Logo placeholder -->
+      <circle cx="80" cy="135" r="10" fill="#6DA88E" />
+      
+      <rect x="120" y="120" width="60" height="10" rx="5" fill="#1A2B3C" />
+      <rect x="120" y="140" width="70" height="6" rx="3" fill="#94A3B8" />
+      
+      <rect x="290" y="120" width="50" height="12" rx="6" fill="#1A2B3C" />
+      
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.6s" fill="freeze" />
+      <animate attributeName="transform" values="translate(0, 135); translate(0, 95)" dur="0.6s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+    </g>
+
+    <!-- Item 3 - Warning -->
+    <g opacity="0">
+      <rect x="35" y="190" width="330" height="110" rx="16" fill="#FFFFFF" stroke="#4F7A91" stroke-width="2" filter="drop-shadow(0 8px 16px rgba(79,122,145,0.1))" />
+      
+      <!-- Alert Badge -->
+      <rect x="35" y="175" width="120" height="24" rx="12" fill="#4F7A91" />
+      <rect x="55" y="183" width="80" height="8" rx="4" fill="#FFFFFF" />
+      
+      <!-- Content -->
+      <rect x="55" y="210" width="50" height="50" rx="12" fill="#E2E8F0" />
+      <rect x="70" y="225" width="20" height="20" rx="4" fill="#64748B" />
+      
+      <rect x="120" y="215" width="90" height="12" rx="6" fill="#1A2B3C" />
+      <rect x="120" y="238" width="60" height="8" rx="4" fill="#94A3B8" />
+      
+      <rect x="280" y="215" width="60" height="14" rx="7" fill="#1A2B3C" />
+      <rect x="280" y="238" width="60" height="8" rx="4" fill="#ef4444" /> <!-- renewal soon color -->
+      
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.8s" fill="freeze" />
+      <animate attributeName="transform" values="translate(0, 230); translate(0, 190)" dur="0.6s" begin="0.8s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+    </g>
+    
+    <!-- Item 4 -->
+    <g opacity="0">
+      <rect x="35" y="315" width="330" height="80" rx="16" fill="#FFFFFF" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.03))" />
+      <rect x="55" y="330" width="50" height="50" rx="12" fill="#CBD5E1" />
+      <rect x="75" y="345" width="10" height="20" rx="5" fill="#475569" />
+      
+      <rect x="120" y="340" width="75" height="10" rx="5" fill="#1A2B3C" />
+      <rect x="120" y="360" width="45" height="6" rx="3" fill="#94A3B8" />
+      
+      <rect x="290" y="340" width="50" height="12" rx="6" fill="#1A2B3C" />
+      
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1s" fill="freeze" />
+      <animate attributeName="transform" values="translate(0, 355); translate(0, 315)" dur="0.6s" begin="1s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" />
+    </g>
+
+  </g>
+
+  <rect x="130" y="790" width="140" height="5" rx="2.5" fill="#1A2B3C" />
+</svg>
