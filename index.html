@@ -5,391 +5,345 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فلس — مستشارك المالي الذكي</title>
-    <meta name="description"
-        content="فلس تطبيق الميزانية الذكي المبني على منهجية الصفر. يقرأ رسائل البنك تلقائياً، يصنف مصاريفك بالذكاء الاصطناعي، ويكتشف اشتراكاتك المخفية.">
-    <meta name="keywords" content="تطبيق ميزانية, إدارة المصاريف, ذكاء اصطناعي, فلس, ميزانية الصفر">
-    <meta name="theme-color" content="#4F7A91">
+    <meta name="description" content="فلس تطبيق الميزانية الذكي المبني على منهجية ميزانية الصفر: يقرأ رسائل البنك تلقائياً، يصنّف مصاريفك بالذكاء الاصطناعي، ويكشف اشتراكاتك المخفية.">
+    <meta name="theme-color" content="#3F788E">
+    <meta property="og:title" content="فلس — مستشارك المالي الذكي">
+    <meta property="og:description" content="فلس تطبيق الميزانية الذكي المبني على منهجية ميزانية الصفر: يقرأ رسائل البنك تلقائياً، يصنّف مصاريفك بالذكاء الاصطناعي، ويكشف اشتراكاتك المخفية.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('fils-theme');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+        })();
+    </script>
 </head>
 
 <body>
+    <a href="#main" class="btn btn--sm btn--ghost skip-link">تخطَّ إلى المحتوى</a>
 
-    <!-- ===== HEADER / NAV ===== -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo" aria-label="فلس">
-                <img src="images/logo.svg" alt="فلس" class="nav__logo-img">
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <nav class="nav container" aria-label="التنقل الرئيسي">
+            <a href="index.html" class="nav__logo" aria-label="فلس — الصفحة الرئيسية">
+                <img src="images/logo.svg" alt="">
+                <span>فلس</span>
             </a>
-            <ul class="nav__links" id="navLinks">
-                <li><a href="#features" class="nav__link">المميزات</a></li>
-                <li><a href="#how-it-works" class="nav__link">كيف يعمل</a></li>
-                <li><a href="#ai" class="nav__link">الذكاء الاصطناعي</a></li>
-                <li><a href="#download" class="nav__link nav__link--cta">حمّل التطبيق</a></li>
+            <ul class="nav__menu" id="navMenu">
+                <li><a class="nav__link" href="index.html">الرئيسية</a></li>
+                <li><a class="nav__link" href="features.html">المميزات</a></li>
+                <li><a class="nav__link" href="pricing.html">الأسعار</a></li>
+                <li><a class="nav__link" href="about.html">عن فلس</a></li>
+                <li><a class="nav__link" href="faq.html">الأسئلة الشائعة</a></li>
+                <li><a class="nav__link" href="contact.html">تواصل معنا</a></li>
             </ul>
-            <button class="nav__toggle" id="navToggle" aria-label="فتح القائمة">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav__actions">
+                <button class="theme-toggle" data-theme-toggle aria-label="تبديل الوضع الليلي">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <a href="index.html#download" class="btn btn--primary btn--sm nav__cta">حمّل التطبيق</a>
+                <button class="nav__burger" aria-label="القائمة" aria-expanded="false" aria-controls="navMenu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
+    <main id="main">
     <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-        <div class="hero__bg-shapes">
-            <div class="hero__circle hero__circle--1"></div>
-            <div class="hero__circle hero__circle--2"></div>
-            <div class="hero__circle hero__circle--3"></div>
-        </div>
-        <div class="hero__content container">
-            <div class="hero__text">
-                <div class="hero__badge">
-                    <span class="hero__badge-dot"></span>
-                    مدعوم بالذكاء الاصطناعي
-                </div>
-                <h1 class="hero__title">
-                    كل <span class="hero__title--accent">فلس</span> له قيمة.
-                    <br>دعنا نثبت لك ذلك.
-                </h1>
-                <p class="hero__subtitle">
-                    تطبيق الإدارة المالية الشخصية الذكي المبني على منهجية ميزانية الصِفر.
-                    يقرأ رسائلك البنكية تلقائياً، يصنّف مصاريفك، ويمنحك تقارير ذكية لاتخاذ قرارات مالية أفضل.
-                </p>
-                <div class="hero__actions">
+    <section class="hero">
+        <div class="hero__grid-bg"></div>
+        <div class="hero__aurora"><span></span><span></span><span></span></div>
+        <div class="container hero__inner">
+            <div class="hero__text" data-reveal>
+                <span class="eyebrow"><span style="width:7px;height:7px;border-radius:50%;background:currentColor;display:inline-block"></span> مدعوم بالذكاء الاصطناعي</span>
+                <h1>كل <em>فلس</em> له وظيفة.<br>دعنا نُريك أين يذهب.</h1>
+                <p class="lead">فلس يقرأ رسائلك البنكية تلقائياً، ويصنّف كل معاملة في ثوانٍ، ويبني لك ميزانية صِفرية واضحة — بدون جداول ولا إدخال يدوي.</p>
+                <div class="hero__cta">
                     <a href="#download" class="btn btn--primary">
-                        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        حمّل مجاناً
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+                        حمّل التطبيق مجاناً
                     </a>
-                    <a href="#features" class="btn btn--outline">
-                        اكتشف المميزات
-                        <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="19" y1="12" x2="5" y2="12" />
-                            <polyline points="12 19 5 12 12 5" />
-                        </svg>
+                    <a href="features.html" class="btn btn--ghost">
+                        استعرض المميزات
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     </a>
                 </div>
-                <div class="hero__stats">
-                    <div class="hero__stat">
-                        <div class="hero__stat-icon-wrap hero__stat-icon-wrap--blue">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </div>
-                        <div class="hero__stat-info">
-                            <span class="hero__stat-value">مجاني ١٠٠٪</span>
-                            <span class="hero__stat-label">بدون أي رسوم مخفية</span>
-                        </div>
+                <div class="hero__proof">
+                    <div class="hero__avatars">
+                        <i style="background:#3F788E">أ</i><i style="background:#57B189">م</i><i style="background:#8E8BE0">س</i><i style="background:#F2B441">ن</i>
                     </div>
-                    <div class="hero__stat-divider"></div>
-                    <div class="hero__stat">
-                        <div class="hero__stat-icon-wrap hero__stat-icon-wrap--green">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        </div>
-                        <div class="hero__stat-info">
-                            <span class="hero__stat-value">أقل من ٢ ثانية</span>
-                            <span class="hero__stat-label">لتصنيف كل معاملة</span>
-                        </div>
+                    <span>ينضم إلينا مستخدمون جدد كل يوم — التطبيق مجاني بالكامل حالياً.</span>
+                </div>
+                <div class="stat-strip">
+                    <div class="stat-strip__item">
+                        <div class="stat-strip__value">مجاني ١٠٠٪</div>
+                        <div class="stat-strip__label">بدون رسوم مخفية</div>
                     </div>
-                    <div class="hero__stat-divider"></div>
-                    <div class="hero__stat">
-                        <div class="hero__stat-icon-wrap hero__stat-icon-wrap--teal">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        </div>
-                        <div class="hero__stat-info">
-                            <span class="hero__stat-value">خصوصية تامة</span>
-                            <span class="hero__stat-label">بياناتك مشفّرة ومحمية</span>
-                        </div>
+                    <div class="stat-strip__item">
+                        <div class="stat-strip__value">أقل من ثانيتين</div>
+                        <div class="stat-strip__label">لتصنيف كل معاملة</div>
+                    </div>
+                    <div class="stat-strip__item">
+                        <div class="stat-strip__value">تشفير كامل</div>
+                        <div class="stat-strip__label">بياناتك تبقى لك</div>
                     </div>
                 </div>
             </div>
-            <div class="hero__visual">
-                <div class="hero__phone-wrapper">
-                    <div class="hero__phone-glow"></div>
-                    <img src="images/mockup-hero.svg" alt="واجهة تطبيق فلس" class="hero__phone-img">
+            <div class="hero__visual" data-reveal data-reveal-delay="120">
+                <div class="device">
+                    <div class="device__frame">
+                        <img src="images/mockup-hero.svg" alt="واجهة تطبيق فلس تعرض الميزانية الشهرية" width="330" height="670">
+                    </div>
+                    <div class="device__chip device__chip--a">
+                        <i class="i-mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></i>
+                        <div><b>تم تصنيف المعاملة</b><small>بقالة · ١٤٧ ر.س</small></div>
+                    </div>
+                    <div class="device__chip device__chip--b">
+                        <i class="i-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.6 17.3A2 2 0 0 0 4.3 20.3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></i>
+                        <div><b>اشتراك يتجدد غداً</b><small>٤٥ ر.س شهرياً</small></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hero__scroll-indicator">
-            <span>اكتشف المزيد</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9" />
-            </svg>
         </div>
     </section>
 
+    <!-- ===== TRUST BAR ===== -->
+    <div class="trustbar">
+        <div class="container trustbar__inner">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> يدعم البنوك السعودية الرئيسية</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> لا نحتفظ بنص رسائلك بعد التحليل</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> يعمل بدون ربط حساب بنكي</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> واجهة عربية أصيلة من اليمين لليسار</span>
+        </div>
+    </div>
+
     <!-- ===== FEATURES ===== -->
-    <section class="features" id="features">
+    <section class="section" id="features">
         <div class="container">
-            <div class="section-header">
-                <span class="section-header__tag">المميزات</span>
-                <h2 class="section-header__title">كل ما تحتاجه<br>لإدارة أموالك بذكاء</h2>
-                <p class="section-header__desc">ميزات مصممة خصيصاً للمستخدم العربي، تعمل بسلاسة مع حساباتك البنكية
-                    المحلية.</p>
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">المميزات</span>
+                <h2>كل ما تحتاجه لتفهم أموالك</h2>
+                <p class="lead">ميزات مصممة للمستخدم العربي أولاً — من قراءة رسالة البنك إلى التقرير الشهري.</p>
             </div>
-            <div class="features__grid">
-                <!-- Feature 1 -->
-                <div class="feature-card" data-aos="fade-up">
-                    <div class="feature-card__icon feature-card__icon--blue">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                            <path d="M8 9h8M8 13h4" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">قراءة الرسائل البنكية</h3>
-                    <p class="feature-card__desc">يقرأ رسائل SMS البنكية تلقائياً ويحوّلها إلى معاملات مالية منظمة بدون
-                        أي إدخال يدوي.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card__icon feature-card__icon--green">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 6v6l4 2" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">تصنيف ذكي بالـ AI</h3>
-                    <p class="feature-card__desc">الذكاء الاصطناعي يتعلم من عاداتك ويصنّف كل معاملة تلقائياً — مطاعم،
-                        بقالة، مواصلات والمزيد.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card__icon feature-card__icon--teal">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="M8 21h8M12 17v4" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">ميزانية الصِفر</h3>
-                    <p class="feature-card__desc">كل ريال له وظيفة. وزّع دخلك على فئات محددة وتابع إنفاقك لحظة بلحظة
-                        بمنهجية مثبتة علمياً.</p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card__icon feature-card__icon--mint">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                            <path d="M12 8v4l3 3" />
-                            <path d="M16.24 7.76l1.42-1.42" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">كشف الاشتراكات</h3>
-                    <p class="feature-card__desc">اكتشف اشتراكاتك المنسية. فلس يحلل أنماط الدفع ويُنبّهك قبل موعد
-                        التجديد لتوفّر أموالك.</p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-card__icon feature-card__icon--warm">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                            <polyline points="14 2 14 8 20 8" />
-                            <line x1="16" y1="13" x2="8" y2="13" />
-                            <line x1="16" y1="17" x2="8" y2="17" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">تقارير مالية ذكية</h3>
-                    <p class="feature-card__desc">تقارير شهرية بأسلوب سردي مفهوم — ليست مجرد أرقام، بل نصائح حقيقية
-                        لتحسين وضعك المالي.</p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-card__icon feature-card__icon--purple">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">خصوصية مطلقة</h3>
-                    <p class="feature-card__desc">بياناتك المالية مشفّرة ومحمية. لا نخزّن رسائلك الأصلية بعد التحليل —
-                        خصوصيتك أولويتنا.</p>
-                </div>
+            <div class="cards">
+                <article class="card" data-reveal>
+                    <div class="card__icon i-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h4"/></svg></div>
+                    <h3>قراءة الرسائل البنكية</h3>
+                    <p>يحوّل رسائل SMS البنكية إلى معاملات منظّمة بالمبلغ والتاجر والتاريخ — بدون إدخال يدوي واحد.</p>
+                </article>
+                <article class="card" data-reveal data-reveal-delay="80">
+                    <div class="card__icon i-mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6 7.8 7.8M16.2 16.2l2.2 2.2M18.4 5.6l-2.2 2.2M7.8 16.2l-2.2 2.2"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+                    <h3>تصنيف ذكي يتعلّم منك</h3>
+                    <p>النموذج يتعرّف على التجار المحليين ويصنّف المعاملة تلقائياً، ويتذكّر تعديلاتك في المرة القادمة.</p>
+                </article>
+                <article class="card" data-reveal data-reveal-delay="160">
+                    <div class="card__icon i-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+                    <h3>ميزانية الصِفر</h3>
+                    <p>وزّع دخلك بالكامل على فئات محددة حتى يصل المتبقي إلى صفر، وتابع كل فئة لحظة بلحظة.</p>
+                </article>
+                <article class="card" data-reveal>
+                    <div class="card__icon i-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.5 4v4.5H16"/><path d="M12 8v4l2.5 2"/></svg></div>
+                    <h3>كشف الاشتراكات المتكرّرة</h3>
+                    <p>يرصد المدفوعات الدورية المنسيّة وينبّهك قبل موعد التجديد لتقرّر: أستمر أم ألغي؟</p>
+                </article>
+                <article class="card" data-reveal data-reveal-delay="80">
+                    <div class="card__icon i-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+                    <h3>تقارير بلغة تفهمها</h3>
+                    <p>تقرير شهري سردي يشرح أين ذهب المال وما الذي تغيّر — لا مجرد أرقام وأعمدة.</p>
+                </article>
+                <article class="card" data-reveal data-reveal-delay="160">
+                    <div class="card__icon i-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                    <h3>خصوصية بالتصميم</h3>
+                    <p>التحليل يتم بأقل قدر ممكن من البيانات، والرسائل الأصلية لا تُخزَّن بعد استخراج المعاملة.</p>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- ===== HOW IT WORKS ===== -->
-    <section class="how-it-works" id="how-it-works">
+    <section class="section section--alt" id="how">
         <div class="container">
-            <div class="section-header">
-                <span class="section-header__tag">كيف يعمل</span>
-                <h2 class="section-header__title">ثلاث خطوات بسيطة<br>لحياة مالية أفضل</h2>
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">كيف يعمل</span>
+                <h2>ثلاث خطوات، ودقيقة واحدة</h2>
+                <p class="lead">لا جداول، ولا استيراد ملفات، ولا إدخال يدوي متعب.</p>
             </div>
             <div class="steps">
-                <div class="step" data-aos="fade-left">
-                    <div class="step__number">١</div>
-                    <div class="step__content">
-                        <h3 class="step__title">سجّل وأنشئ حساباتك</h3>
-                        <p class="step__desc">أضف حساباتك البنكية والمحافظ الإلكترونية. فلس يدعم جميع البنوك السعودية.
-                        </p>
-                    </div>
-                    <div class="step__line"></div>
+                <div class="step" data-reveal>
+                    <div class="step__num">١</div>
+                    <h3>أنشئ حساباتك</h3>
+                    <p>أضف حساباتك ومحافظك الإلكترونية. فلس يتعرّف على صيغ الرسائل لدى البنوك السعودية الرئيسية.</p>
                 </div>
-                <div class="step" data-aos="fade-left" data-aos-delay="200">
-                    <div class="step__number">٢</div>
-                    <div class="step__content">
-                        <h3 class="step__title">وزّع ميزانيتك</h3>
-                        <p class="step__desc">حدد فئات الإنفاق ووزّع دخلك عليها. الذكاء الاصطناعي يساعدك في التوزيع
-                            الأمثل بناءً على عاداتك.</p>
-                    </div>
-                    <div class="step__line"></div>
+                <div class="step" data-reveal data-reveal-delay="100">
+                    <div class="step__num">٢</div>
+                    <h3>وزّع ميزانيتك</h3>
+                    <p>حدّد فئات إنفاقك ووزّع دخل الشهر عليها. الاقتراح الذكي يبدأ من عاداتك الفعلية لا من قوالب جاهزة.</p>
                 </div>
-                <div class="step" data-aos="fade-left" data-aos-delay="400">
-                    <div class="step__number">٣</div>
-                    <div class="step__content">
-                        <h3 class="step__title">استرخِ وراقب</h3>
-                        <p class="step__desc">فلس يتتبع مصاريفك تلقائياً من الرسائل البنكية ويُنبّهك إذا اقتربت من حدود
-                            الميزانية.</p>
-                    </div>
+                <div class="step" data-reveal data-reveal-delay="200">
+                    <div class="step__num">٣</div>
+                    <h3>راقب وارتَح</h3>
+                    <p>كل معاملة جديدة تُسجَّل وتُصنَّف تلقائياً، وتصلك تنبيهات مبكرة قبل تجاوز أي فئة.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== AI SHOWCASE ===== -->
-    <section class="ai-showcase" id="ai">
-        <div class="container">
-            <div class="ai-showcase__wrapper">
-                <div class="ai-showcase__visual">
-                    <div class="ai-showcase__phone-wrapper">
-                        <div class="ai-showcase__glow"></div>
-                        <img src="images/mockup-ai.svg" alt="مستشار فلس المالي الذكي" class="ai-showcase__phone-img">
-                    </div>
+    <!-- ===== AI SPLIT ===== -->
+    <section class="section" id="ai">
+        <div class="container split">
+            <div data-reveal>
+                <span class="eyebrow">قادم قريباً</span>
+                <h2>مستشارك المالي في جيبك</h2>
+                <p class="lead">نعمل على مستشار ذكي يدردش معك بالعربية ويحلّل بياناتك الحقيقية، ليقترح خطوات عملية بدل النصائح العامة.</p>
+                <ul class="checklist">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تحليل أنماط الإنفاق شهراً بشهر</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> اقتراحات مخصّصة لخفض المصاريف الأعلى</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تقارير سردية بلغة عربية واضحة</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تنبيهات استباقية قبل نفاد ميزانية الفئة</li>
+                </ul>
+                <div class="callout">
+                    <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i>
+                    <div><b>قيد التطوير الآن</b><span>سيصل أولاً لمستخدمي النسخة التجريبية.</span></div>
                 </div>
-                <div class="ai-showcase__content">
-                    <span class="section-header__tag">قادم قريباً</span>
-                    <h2 class="ai-showcase__title">مستشارك المالي<br>في جيبك</h2>
-                    <p class="ai-showcase__desc">
-                        نعمل على تطوير مستشار مالي ذكي يدردش معك ويحلل بياناتك الحقيقية.
-                        سيقدم لك نصائح مالية مخصصة واقتراحات عملية لتحسين وضعك المالي.
-                    </p>
-                    <ul class="ai-showcase__list">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            تحليل ذكي لأنماط الإنفاق الشهرية
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            نصائح مخصصة لتقليل المصاريف
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            تقارير سردية بلغة عربية واضحة
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            تنبيهات استباقية قبل نفاد الميزانية
-                        </li>
-                    </ul>
-                    <div class="coming-soon-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        قادم قريباً — نعمل عليه الآن
-                    </div>
+            </div>
+            <div class="split__visual" data-reveal data-reveal-delay="120">
+                <div class="device">
+                    <div class="device__frame"><img src="images/mockup-ai.svg" alt="مستشار فلس المالي الذكي" width="330" height="670"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SUBSCRIPTION SECTION ===== -->
-    <section class="subscriptions" id="subscriptions">
-        <div class="container">
-            <div class="subscriptions__wrapper">
-                <div class="subscriptions__content">
-                    <span class="section-header__tag">مدير الاشتراكات</span>
-                    <h2 class="subscriptions__title">اشتراكاتك المنسية<br>تكلّفك أكثر مما تظن</h2>
-                    <p class="subscriptions__desc">
-                        فلس يراقب حركاتك المالية ويكتشف الاشتراكات المتكررة التي ربما نسيتها.
-                        يُنبّهك قبل التجديد ويساعدك على اتخاذ قرار بالإلغاء أو الاستمرار.
-                    </p>
-                    <div class="subscriptions__savings-box">
-                        <div class="subscriptions__savings-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                <path d="M2 17l10 5 10-5" />
-                                <path d="M2 12l10 5 10-5" />
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>وفّر حتى ٣٠٪ من اشتراكاتك</strong>
-                            <span>بكشف الاشتراكات المخفية والمكررة</span>
-                        </div>
-                    </div>
+    <!-- ===== SUBSCRIPTIONS SPLIT ===== -->
+    <section class="section section--alt">
+        <div class="container split split--rev">
+            <div data-reveal>
+                <span class="eyebrow">مدير الاشتراكات</span>
+                <h2>الاشتراكات المنسيّة تكلّفك أكثر مما تظن</h2>
+                <p class="lead">فلس يراقب حركاتك ويكتشف المدفوعات المتكرّرة — حتى تلك التي اشتركت بها قبل سنة ونسيتها تماماً.</p>
+                <ul class="checklist">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> قائمة واحدة بكل اشتراكاتك النشطة</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تنبيه قبل التجديد بوقت كافٍ للإلغاء</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> رصد الاشتراكات المكرّرة والمتشابهة</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تقدير التكلفة السنوية لكل اشتراك</li>
+                </ul>
+                <div class="callout">
+                    <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></i>
+                    <div><b>راجع اشتراكاتك في دقيقة</b><span>معظم المستخدمين يجدون اشتراكاً واحداً على الأقل لا يستخدمونه.</span></div>
                 </div>
-                <div class="subscriptions__visual">
-                    <div class="subscriptions__phone-wrapper">
-                        <img src="images/mockup-subscriptions.svg" alt="إدارة الاشتراكات"
-                            class="subscriptions__phone-img">
-                    </div>
+            </div>
+            <div class="split__visual" data-reveal data-reveal-delay="120">
+                <div class="device">
+                    <div class="device__frame"><img src="images/mockup-subscriptions.svg" alt="شاشة إدارة الاشتراكات في فلس" width="330" height="670"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA / DOWNLOAD ===== -->
-    <section class="cta" id="download">
-        <div class="cta__bg-shapes">
-            <div class="cta__circle cta__circle--1"></div>
-            <div class="cta__circle cta__circle--2"></div>
-        </div>
+    <!-- ===== TESTIMONIALS =====
+         ملاحظة: الآراء أدناه نصوص افتراضية للعرض فقط — استبدلها بآراء حقيقية قبل النشر. -->
+    <section class="section">
         <div class="container">
-            <div class="cta__content">
+            <div class="section-head" data-reveal>
+                <span class="eyebrow">آراء المستخدمين</span>
+                <h2>ماذا يقول مجرّبو النسخة التجريبية</h2>
+                <p class="lead">انطباعات من مستخدمين شاركوا في التجربة المبكرة للتطبيق.</p>
+            </div>
+            <div class="quotes">
+                <figure class="quote" data-reveal>
+                    <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></div>
+                    <p>«أول مرة أعرف بالضبط وين راح راتبي. التصنيف التلقائي وفّر عليّ وقت كنت أضيّعه على جدول إكسل كل شهر.»</p>
+                    <figcaption class="quote__who"><i style="background:#3F788E">ع</i><div><b>عبدالله ا.</b><small>مهندس برمجيات · الرياض</small></div></figcaption>
+                </figure>
+                <figure class="quote" data-reveal data-reveal-delay="80">
+                    <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></div>
+                    <p>«كشف لي اشتراكين كنت ناسيتهما من سنة. التطبيق سدّد ثمن نفسه من أول أسبوع — وهو أصلاً مجاني.»</p>
+                    <figcaption class="quote__who"><i style="background:#57B189">ل</i><div><b>لمى ق.</b><small>مصممة جرافيك · جدة</small></div></figcaption>
+                </figure>
+                <figure class="quote" data-reveal data-reveal-delay="160">
+                    <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></div>
+                    <p>«الواجهة عربية بشكل صحيح، مو ترجمة مقلوبة. وميزانية الصفر خلّت الادخار عندي عادة بدل ما يكون صدفة.»</p>
+                    <figcaption class="quote__who"><i style="background:#8E8BE0">م</i><div><b>محمد ر.</b><small>محاسب · الدمام</small></div></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" id="download">
+        <div class="container">
+            <div class="cta" data-reveal>
                 <img src="images/logo.svg" alt="فلس" class="cta__logo">
-                <h2 class="cta__title">ابدأ رحلتك المالية<br>مع فلس الآن</h2>
-                <p class="cta__desc">حمّل التطبيق مجاناً وابدأ بإدارة أموالك بشكل أذكى. كل فلس يستحق أن يُحسب.</p>
-                <div class="cta__buttons">
-                    <a href="#" class="store-badge" aria-label="حمّل من App Store">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                            <path
-                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                        </svg>
-                        <div>
-                            <small>حمّل من</small>
-                            <strong>App Store</strong>
-                        </div>
+                <h2>ابدأ رحلتك المالية اليوم</h2>
+                <p>حمّل فلس مجاناً، واربطه برسائلك البنكية خلال دقيقة واحدة. لا بطاقة ائتمان، ولا رسوم مخفية.</p>
+                <div class="stores">
+                    <a href="#" class="store" aria-label="حمّل من App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div><small>حمّل من</small><strong>App Store</strong></div>
                     </a>
-                    <a href="#" class="store-badge" aria-label="حمّل من Google Play">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                            <path
-                                d="M3.18 23.67c-.3-.18-.55-.52-.55-.97V1.3c0-.45.25-.79.55-.97l11.25 11.67L3.18 23.67zM15.47 13.05L5.08 23.44l12.85-7.2-2.46-3.19zm2.93-1.62l-2.19 1.24L18.68 16l3.34-1.87c.6-.34.6-.89 0-1.23l-3.62-2.47zM5.08.56l10.39 10.4 2.46-2.55L5.08.56z" />
-                        </svg>
-                        <div>
-                            <small>حمّل من</small>
-                            <strong>Google Play</strong>
-                        </div>
+                    <a href="#" class="store" aria-label="حمّل من Google Play">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.67c-.3-.18-.55-.52-.55-.97V1.3c0-.45.25-.79.55-.97l11.25 11.67L3.18 23.67zM15.47 13.05L5.08 23.44l12.85-7.2-2.46-3.19zm2.93-1.62l-2.19 1.24L18.68 16l3.34-1.87c.6-.34.6-.89 0-1.23l-3.62-2.47zM5.08.56l10.39 10.4 2.46-2.55L5.08.56z"/></svg>
+                        <div><small>حمّل من</small><strong>Google Play</strong></div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
+            <div class="footer__grid">
                 <div class="footer__brand">
-                    <img src="images/logo.svg" alt="فلس" class="footer__logo">
-                    <p class="footer__tagline">مستشارك المالي الذكي</p>
+                    <a href="index.html" class="nav__logo footer__lockup"><img src="images/logo.svg" alt=""><span>فلس</span></a>
+                    <p>تطبيق الإدارة المالية الشخصية المبني على منهجية ميزانية الصِفر، بواجهة عربية أصيلة وذكاء اصطناعي يفهم رسائلك البنكية.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="إكس"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.1 8.1L23.2 22h-6.6l-5.2-6.8L5.5 22H2.4l7.6-8.7L1.2 2h6.8l4.7 6.2L18.9 2zm-1.1 18.1h1.7L7.3 3.8H5.5l12.3 16.3z"/></svg></a>
+                        <a href="#" aria-label="إنستغرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                        <a href="#" aria-label="لينكدإن"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.06c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.06-3.34-2.06 0-2.38 1.59-2.38 3.23V21h-4z"/></svg></a>
+                        <a href="mailto:support@fils.app" aria-label="البريد"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a>
+                    </div>
                 </div>
-                <div class="footer__links">
-                    <a href="#">سياسة الخصوصية</a>
-                    <a href="#">الشروط والأحكام</a>
-                    <a href="mailto:support@fils.app">الدعم الفني</a>
+                <div class="footer__col">
+                    <h4>المنتج</h4>
+                    <ul>
+                        <li><a href="features.html">المميزات</a></li>
+                        <li><a href="pricing.html">الأسعار</a></li>
+                        <li><a href="index.html#how">كيف يعمل</a></li>
+                        <li><a href="index.html#download">تحميل التطبيق</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>الشركة</h4>
+                    <ul>
+                        <li><a href="about.html">عن فلس</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>قانوني</h4>
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="mailto:support@fils.app">الدعم الفني</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>© ٢٠٢٦ فلس. جميع الحقوق محفوظة.</p>
+                <p>© <span data-year>٢٠٢٦</span> فلس. جميع الحقوق محفوظة.</p>
+                <p>صُنع بعناية في السعودية 🇸🇦</p>
             </div>
         </div>
     </footer>

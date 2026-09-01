@@ -1,105 +1,114 @@
-// ===== DOM Ready =====
-document.addEventListener('DOMContentLoaded', () => {
+/* =========================================================
+   فلس — Site scripts
+   ========================================================= */
+(function () {
+    'use strict';
 
-    // ===== Mobile Nav Toggle =====
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
+    /* ---------- Theme (runs before paint via inline snippet too) ---------- */
+    var STORAGE_KEY = 'fils-theme';
 
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu on link click
-        navLinks.querySelectorAll('.nav__link').forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) { /* ignore */ }
     }
 
-    // ===== Sticky Header on Scroll =====
-    const header = document.getElementById('header');
-    let lastScrollY = 0;
+    function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    }
 
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    document.addEventListener('DOMContentLoaded', function () {
+
+        /* ---------- Theme toggle ---------- */
+        document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+            });
+        });
+
+        /* ---------- Sticky header ---------- */
+        var header = document.querySelector('.header');
+        if (header) {
+            var onScroll = function () {
+                header.classList.toggle('is-stuck', window.scrollY > 12);
+            };
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
         }
-        lastScrollY = scrollY;
-    });
 
-    // ===== Scroll Reveal (AOS-like) =====
-    const revealElements = document.querySelectorAll('[data-aos]');
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const delay = entry.target.getAttribute('data-aos-delay') || 0;
-                setTimeout(() => {
-                    entry.target.classList.add('aos-animate');
-                }, parseInt(delay));
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // ===== Counter Animation =====
-    const counters = document.querySelectorAll('.hero__stat-number[data-count]');
-
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = parseInt(el.getAttribute('data-count'));
-                const duration = 1500;
-                const step = target / (duration / 16);
-                let current = 0;
-
-                const updateCount = () => {
-                    current += step;
-                    if (current < target) {
-                        el.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        el.textContent = target;
-                    }
-                };
-
-                updateCount();
-                counterObserver.unobserve(el);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => counterObserver.observe(counter));
-
-    // ===== Smooth Scroll for hash links =====
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            const targetEl = document.querySelector(targetId);
-            if (targetEl) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+        /* ---------- Mobile menu ---------- */
+        var burger = document.querySelector('.nav__burger');
+        var menu = document.querySelector('.nav__menu');
+        if (burger && menu) {
+            burger.addEventListener('click', function () {
+                var open = menu.classList.toggle('is-open');
+                burger.classList.toggle('is-open', open);
+                burger.setAttribute('aria-expanded', String(open));
+            });
+            menu.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    menu.classList.remove('is-open');
+                    burger.classList.remove('is-open');
+                    burger.setAttribute('aria-expanded', 'false');
                 });
+            });
+        }
+
+        /* ---------- Mark active nav link ---------- */
+        var page = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav__link').forEach(function (link) {
+            var href = link.getAttribute('href') || '';
+            if (href === page || (page === 'index.html' && href === './')) {
+                link.classList.add('is-active');
             }
         });
-    });
 
-});
+        /* ---------- Scroll reveal ---------- */
+        var items = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window)) {
+            items.forEach(function (el) { el.classList.add('is-in'); });
+        } else {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var delay = parseInt(entry.target.getAttribute('data-reveal-delay') || '0', 10);
+                    setTimeout(function () { entry.target.classList.add('is-in'); }, delay);
+                    io.unobserve(entry.target);
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+            items.forEach(function (el) { io.observe(el); });
+        }
+
+        /* ---------- Smooth scroll for in-page anchors ---------- */
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                var id = a.getAttribute('href');
+                if (!id || id === '#') return;
+                var target = document.querySelector(id);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.replaceState(null, '', id);
+            });
+        });
+
+        /* ---------- Contact form (front-end only) ---------- */
+        var form = document.querySelector('[data-contact-form]');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (!form.checkValidity()) { form.reportValidity(); return; }
+                var status = form.querySelector('.form__status');
+                if (status) {
+                    status.textContent = 'شكراً لك! وصلتنا رسالتك وسنعود إليك خلال يوم عمل واحد.';
+                    status.classList.add('is-visible');
+                }
+                form.reset();
+            });
+        }
+
+        /* ---------- Footer year ---------- */
+        document.querySelectorAll('[data-year]').forEach(function (el) {
+            el.textContent = new Date().getFullYear().toLocaleString('ar-EG', { useGrouping: false });
+        });
+    });
+})();
