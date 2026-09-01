@@ -108,7 +108,7 @@
 
         /* ---------- Footer year ---------- */
         document.querySelectorAll('[data-year]').forEach(function (el) {
-            el.textContent = new Date().getFullYear().toLocaleString('ar-EG', { useGrouping: false });
+            el.textContent = String(new Date().getFullYear());
         });
     });
 })();
