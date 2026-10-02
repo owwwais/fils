@@ -874,18 +874,14 @@ h3 { font-size: 1.12rem; }
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
 }
 :root[data-theme="dark"] .txlist li, :root[data-theme="dark"] .subs li { background: var(--surface-2); }
-.txlist i { width: 36px; height: 36px; border-radius: 11px; flex: none; display: grid; place-items: center; }
-.txlist i svg { width: 18px; height: 18px; }
+.txlist i, .subs i { width: 36px; height: 36px; border-radius: 11px; flex: none; display: grid; place-items: center; }
+.txlist i svg, .subs i svg { width: 18px; height: 18px; }
 .txlist b, .subs b { display: block; font-size: .9rem; font-weight: 600; }
 .txlist small, .subs small { font-size: .76rem; color: var(--text-mute); }
 .txlist .amt, .subs .amt { margin-inline-start: auto; white-space: nowrap; }
 .txlist li.is-learned { border-color: var(--brand-400); box-shadow: var(--ring); }
 .txlist li.is-learned small { color: var(--brand-600); }
 :root[data-theme="dark"] .txlist li.is-learned small { color: var(--brand-200); }
-.subs .logo {
-    width: 34px; height: 34px; border-radius: 10px; flex: none; display: grid; place-items: center;
-    font-size: .85rem; font-weight: 600; color: var(--text-soft); background: var(--surface-inset);
-}
 .subs .flag { color: #96650A; }
 :root[data-theme="dark"] .subs .flag { color: var(--amber-400); }
 
