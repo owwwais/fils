@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الأسعار — فلس</title>
-    <meta name="description" content="خطط فلس: خطة أساسية مجانية دائماً، وخطتا بلس والعائلة قريباً بمزايا متقدّمة للتحليل وإدارة الاشتراكات.">
+    <title>فلس بلس | الأسعار</title>
+    <meta name="description" content="فلس بلس: المستشار المالي الذكي، تسجيل المصروف بالصوت، الودجات، والتحليلات الشهرية المتقدّمة. 15 ريال شهرياً أو 150 ريال سنوياً، والأساسيات مجانية دائماً.">
     <meta name="theme-color" content="#3F788E">
-    <meta property="og:title" content="الأسعار — فلس">
-    <meta property="og:description" content="خطط فلس: خطة أساسية مجانية دائماً، وخطتا بلس والعائلة قريباً بمزايا متقدّمة للتحليل وإدارة الاشتراكات.">
+    <meta property="og:title" content="فلس بلس | الأسعار">
+    <meta property="og:description" content="فلس بلس: المستشار المالي الذكي، تسجيل المصروف بالصوت، الودجات، والتحليلات الشهرية المتقدّمة. 15 ريال شهرياً أو 150 ريال سنوياً، والأساسيات مجانية دائماً.">
     <meta property="og:type" content="website">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,80 +58,359 @@
     </header>
 
     <main id="main">
-    <section class="page-hero">
-        <div class="container">
-            <span class="eyebrow">الأسعار</span>
-            <h1>مجاني اليوم، وواضح دائماً</h1>
-            <p class="lead">فلس مجاني بالكامل في مرحلته الحالية. وحين نطلق الخطة المدفوعة، ستبقى الأساسيات مجانية إلى الأبد.</p>
+
+    <!-- ===== HERO ===== -->
+    <section class="plus-hero">
+        <div class="container plus-hero__inner">
+            <div data-reveal>
+                <span class="eyebrow plus-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.6 13.8 7.3 21l4.7-2.5 4.7 2.5-1.3-7.2"/></svg>
+                    فلس بلس
+                </span>
+                <h1>فلس، بكامل قوّته.</h1>
+                <p class="lead">المستشار المالي الذكي، تسجيل المصروف بالصوت، الودجات، والتحليلات المتقدّمة. كلها في اشتراك واحد، من 12.50 ريال في الشهر.</p>
+                <div class="plus-hero__cta">
+                    <a href="#plans" class="btn btn--primary">اختر خطتك</a>
+                    <a href="#compare" class="btn btn--quiet">
+                        قارن الخطط
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="plus-hero__visual" data-reveal data-reveal-delay="120">
+                <div class="pass-stage" data-tilt>
+                    <div class="pass-float">
+                        <div class="pass pass--back" aria-hidden="true"></div>
+                        <div class="pass pass--front" role="img" aria-label="بطاقة عضوية فلس بلس السنوية">
+                            <span class="pass__sheen"></span>
+                            <div class="pass__row" aria-hidden="true">
+                                <span class="pass__brand"><img src="images/logo.svg" alt="">فلس</span>
+                                <span class="pass__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                            </div>
+                            <div class="pass__row" aria-hidden="true">
+                                <span class="pass__name"><small>عضوية</small>بلس</span>
+                                <span class="pass__meta">العضوية السنوية<b>شهران مجاناً</b></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="device__chip pass-chip--a" aria-hidden="true">
+                        <i class="i-mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></i>
+                        <div><b>«دفعت 32 ريال غداء»</b><small>سُجّل في المطاعم</small></div>
+                    </div>
+                    <div class="device__chip pass-chip--b" aria-hidden="true">
+                        <i class="i-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.7 8l4.5 1.7-4.5 1.7L12 16l-1.7-4.6L5.8 9.7 10.3 8z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></i>
+                        <div><b>300 سؤال شهرياً</b><small>للمستشار المالي الذكي</small></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- ===== PLANS ===== -->
+    <section class="section plus-plans" id="plans">
         <div class="container">
-            <!-- الأسعار أدناه افتراضية للعرض — استبدلها بأسعارك الفعلية قبل النشر -->
-            <div class="plans">
-                <div class="plan" data-reveal>
-                    <h3>الأساسية</h3>
-                    <div class="plan__price">مجاناً <small>/ دائماً</small></div>
-                    <p style="color:var(--text-soft);font-size:.9rem">كل ما تحتاجه لتبدأ ضبط ميزانيتك اليوم.</p>
-                    <ul class="checklist">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> قراءة الرسائل البنكية وتصنيفها</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> ميزانية صِفرية غير محدودة الفئات</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> حسابان بنكيان</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تقرير شهري أساسي</li>
-                    </ul>
-                    <a href="index.html#download" class="btn btn--ghost">ابدأ مجاناً</a>
-                </div>
-
-                <div class="plan plan--featured" data-reveal data-reveal-delay="80">
-                    <span class="plan__tag">قريباً</span>
-                    <h3>بلس</h3>
-                    <div class="plan__price">19 ر.س <small>/ شهرياً</small></div>
-                    <p style="color:var(--text-soft);font-size:.9rem">لمن يريد صورة أعمق وأدوات تخطيط أقوى.</p>
-                    <ul class="checklist">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> كل مزايا الخطة الأساسية</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> حسابات بنكية غير محدودة</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> رادار الاشتراكات المتقدّم</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> المستشار المالي الذكي</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> تقارير سردية وتصدير CSV</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn--primary">انضم لقائمة الانتظار</a>
-                </div>
-
-                <div class="plan" data-reveal data-reveal-delay="160">
-                    <h3>العائلة</h3>
-                    <div class="plan__price">29 ر.س <small>/ شهرياً</small></div>
-                    <p style="color:var(--text-soft);font-size:.9rem">ميزانية مشتركة لأفراد الأسرة حتى خمسة أشخاص.</p>
-                    <ul class="checklist">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> كل مزايا خطة بلس</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> ميزانية مشتركة وأهداف عائلية</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> صلاحيات مخصّصة لكل فرد</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg> دعم ذو أولوية</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn--ghost">انضم لقائمة الانتظار</a>
-                </div>
+            <div class="section-head" data-reveal>
+                <h2>سعر رمزي، وقيمة حقيقية</h2>
+                <p class="lead">كل أساسيات فلس مجانية للجميع. بلس يضيف الأدوات المتقدّمة، ويمكنك إلغاؤه متى شئت.</p>
+                <fieldset class="billing">
+                    <legend class="sr-only">مدة الاشتراك</legend>
+                    <input type="radio" name="billing" id="bill-monthly" value="monthly">
+                    <label for="bill-monthly">شهري</label>
+                    <input type="radio" name="billing" id="bill-yearly" value="yearly" checked>
+                    <label for="bill-yearly">سنوي <span class="billing__save">شهران مجاناً</span></label>
+                    <span class="billing__thumb" aria-hidden="true"></span>
+                </fieldset>
             </div>
 
-            <div class="section-head" style="margin-block-start:clamp(56px,8vw,90px)" data-reveal>
-                <span class="eyebrow">أسئلة عن الاشتراك</span>
-                <h2>ما قد يخطر ببالك</h2>
+            <div class="tiers">
+                <article class="tier tier--plus" data-reveal>
+                    <header class="tier__head">
+                        <h3 class="tier__name">
+                            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i>
+                            بلس
+                        </h3>
+                        <span class="tier__flag">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>
+                            الأفضل قيمة
+                        </span>
+                    </header>
+                    <p class="tier__desc">لمن يريد مستشاراً حاضراً كل يوم، وصورة أعمق لماله.</p>
+                    <div class="tier__price">
+                        <p class="price is-monthly"><b>15</b><span>ريال / شهرياً</span></p>
+                        <p class="price is-yearly"><b>150</b><span>ريال / سنوياً</span></p>
+                    </div>
+                    <p class="tier__note">
+                        <span class="is-monthly">يتجدّد كل شهر، ويمكنك الإلغاء متى شئت.</span>
+                        <span class="is-yearly">أي 12.50 ريال شهرياً، <b>وتوفّر 30 ريال</b>.</span>
+                    </p>
+                    <a href="#download" class="btn btn--light">اشترك في بلس</a>
+                    <ul class="tier__list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span><b>300</b> سؤال شهرياً للمستشار المالي الذكي</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>ملخّص ذكي وتحليلات متقدّمة <b>كل شهر</b></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>تسجيل المصروف بصوتك</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>ودجات جديدة للشاشة الرئيسية</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>مزامنة سحابية لحظية بين أجهزتك</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>كل ما في الخطة المجانية</span></li>
+                    </ul>
+                </article>
+
+                <article class="tier" data-reveal data-reveal-delay="80">
+                    <header class="tier__head">
+                        <h3 class="tier__name">
+                            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg></i>
+                            المجاني
+                        </h3>
+                    </header>
+                    <p class="tier__desc">كل أساسيات فلس، مفتوحة للجميع ودون بطاقة ائتمان.</p>
+                    <div class="tier__price">
+                        <p class="price"><b>0</b><span>ريال / دائماً</span></p>
+                    </div>
+                    <p class="tier__note"><span>بلا التزام، ولا تاريخ انتهاء.</span></p>
+                    <a href="#download" class="btn btn--ghost">ابدأ مجاناً</a>
+                    <ul class="tier__list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>قراءة الرسائل البنكية وتصنيفها تلقائياً</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>ميزانية الصفر وكل الميزات الأساسية</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span><b>20</b> سؤالاً شهرياً للمستشار المالي الذكي</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>ملخّص شهري ذكي واحد</span></li>
+                    </ul>
+                </article>
             </div>
-            <div class="faq" data-reveal>
+
+            <ul class="assurances" data-reveal>
+                <li>
+                    <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.5 4v4.5H16"/></svg></i>
+                    <div><b>ألغِ متى شئت</b><span>من إعدادات المتجر، ويبقى بلس فعّالاً حتى نهاية فترتك.</span></div>
+                </li>
+                <li>
+                    <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></i>
+                    <div><b>السعر نهائي</b><span>الأسعار شاملة ضريبة القيمة المضافة، دون رسوم إضافية.</span></div>
+                </li>
+                <li>
+                    <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="3"/><path d="M7.5 9.5h9M7.5 14.5h5"/></svg></i>
+                    <div><b>قيد تلقائي في مصروفاتك</b><span>كل دفعة مؤكّدة تظهر في مصروفاتك، و«فلس بلس» في قسم الاشتراكات.</span></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== WHAT PLUS ADDS ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="section-head section-head--start" data-reveal>
+                <h2>ما الذي يضيفه بلس؟</h2>
+                <p class="lead">أدوات تختصر عليك الوقت: تسأل فتُجاب، تتكلّم فيُسجَّل، وتلقي نظرة على شاشتك فتعرف أين تقف.</p>
+            </div>
+
+            <div class="bento">
+                <article class="bento__cell bento__cell--advisor" data-reveal>
+                    <div>
+                        <span class="bento__label">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+                            متاح الآن
+                        </span>
+                        <h3>المستشار المالي الذكي</h3>
+                        <p>اسأله بالعربية عن مصاريفك، فيجيبك من أرقامك الحقيقية لا من نصائح عامة. 300 سؤال شهرياً مع بلس.</p>
+                    </div>
+                    <div class="bento__visual mini-chat" aria-hidden="true">
+                        <p class="mini-chat__msg mini-chat__msg--out">كم صرفت على المطاعم هالشهر؟</p>
+                        <p class="mini-chat__msg mini-chat__msg--in">صرفت <b>1,240 ريال</b>، أقل بـ 18% من أغسطس. أكبر بند عندك القهوة بـ 410 ريال.</p>
+                        <p class="mini-chat__msg mini-chat__msg--out">طيب كم أقدر أوفّر لو خففتها؟</p>
+                        <div class="mini-chat__input">
+                            <span>اسأل عن ميزانيتك…</span>
+                            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bento__cell bento__cell--voice" data-reveal data-reveal-delay="80">
+                    <div>
+                        <h3>سجّل مصروفك بصوتك</h3>
+                        <p>قل ما دفعت، ويتولّى فلس المبلغ والفئة.</p>
+                    </div>
+                    <div class="bento__visual voice" aria-hidden="true">
+                        <span class="voice__mic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></span>
+                        <span class="voice__wave"><i style="--i:0"></i><i style="--i:3"></i><i style="--i:1"></i><i style="--i:5"></i><i style="--i:2"></i><i style="--i:6"></i><i style="--i:4"></i><i style="--i:1"></i><i style="--i:3"></i><i style="--i:0"></i><i style="--i:5"></i></span>
+                        <p class="voice__quote">«دفعت 45 ريال قهوة»</p>
+                        <div class="voice__result">
+                            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v2M12 3v2"/></svg></i>
+                            <span><b>قهوة</b><small>مطاعم ومقاهي</small></span>
+                            <b class="voice__amt">45 ريال</b>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bento__cell bento__cell--widgets" data-reveal>
+                    <div>
+                        <h3>ودجات للشاشة الرئيسية</h3>
+                        <p>ميزانيتك وآخر مصاريفك أمامك، دون أن تفتح التطبيق.</p>
+                    </div>
+                    <div class="bento__visual widgets" aria-hidden="true">
+                        <div class="widget">
+                            <span class="ring" style="--p:62">62%</span>
+                            <div><small>المتبقي هذا الشهر</small><b>4,280 ريال</b></div>
+                        </div>
+                        <div class="widget">
+                            <div><small>اليوم</small><b>84 ريال</b></div>
+                            <ul><li><span>قهوة</span><span>18</span></li><li><span>بقالة</span><span>66</span></li></ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bento__cell bento__cell--analytics" data-reveal data-reveal-delay="80">
+                    <div>
+                        <h3>تحليلات شهرية متقدّمة</h3>
+                        <p>ملخّص ذكي كل شهر يقارن إنفاقك بما سبقه، ويشرح لك أسباب التغيّر.</p>
+                    </div>
+                    <div class="bento__visual chart" aria-hidden="true">
+                        <div class="chart__head">
+                            <div><small>إنفاق سبتمبر</small><b>6,720 ريال</b></div>
+                            <span class="chart__delta">أقل 12% من أغسطس</span>
+                        </div>
+                        <div class="chart__bars">
+                            <span style="--h:70%"><i>أبريل</i></span>
+                            <span style="--h:77%"><i>مايو</i></span>
+                            <span style="--h:100%"><i>يونيو</i></span>
+                            <span style="--h:86%"><i>يوليو</i></span>
+                            <span style="--h:92%"><i>أغسطس</i></span>
+                            <span class="is-now" style="--h:81%"><i>سبتمبر</i></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bento__cell bento__cell--data" data-reveal>
+                    <div>
+                        <h3>بياناتك، حيث تريدها</h3>
+                        <p>احفظها على جهازك فقط، أو على السحابة بمزامنة لحظية بين أجهزتك. أنت من يقرّر.</p>
+                    </div>
+                    <div class="storage" aria-hidden="true">
+                        <div class="storage__opt">
+                            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></i>
+                            <span><b>على جهازك فقط</b><small>لا تغادر بياناتك هاتفك</small></span>
+                            <span class="storage__radio"></span>
+                        </div>
+                        <div class="storage__opt is-on">
+                            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 17.9 9a4.75 4.75 0 0 1-.4 9.5z"/></svg></i>
+                            <span><b>السحابة بمزامنة لحظية</b><small>أجهزتك كلها على الأرقام نفسها</small></span>
+                            <span class="storage__radio"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMPARE ===== -->
+    <section class="section" id="compare">
+        <div class="container">
+            <div class="section-head" data-reveal>
+                <h2>المجاني وبلس، جنباً إلى جنب</h2>
+                <p class="lead">الميزات الأساسية مفتوحة في الخطتين. الفرق في الأدوات المتقدّمة وحدود المستشار الذكي.</p>
+            </div>
+
+            <div class="compare" data-reveal>
+                <table>
+                    <caption class="sr-only">مقارنة بين الخطة المجانية وخطة بلس</caption>
+                    <colgroup><col><col><col></colgroup>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th scope="col">المجاني<small>0 ريال</small></th>
+                            <th scope="col" class="is-plus">
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>بلس</span>
+                                <small>من 12.50 ريال شهرياً</small>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare__group">
+                            <th scope="rowgroup" colspan="2">الذكاء الاصطناعي</th>
+                            <td class="is-plus"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">أسئلة المستشار الذكي<small>فلس بوت</small></th>
+                            <td>20 شهرياً<small>5 يومياً</small></td>
+                            <td class="is-plus">300 شهرياً<small>60 يومياً</small></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">الملخّص الشهري الذكي</th>
+                            <td>تقرير واحد</td>
+                            <td class="is-plus">كل شهر</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">التحليلات الشهرية المتقدّمة</th>
+                            <td><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 12h10"/></svg><span class="sr-only">غير متاح</span></td>
+                            <td class="is-plus"><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span class="sr-only">متاح</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">تصنيف الرسائل تلقائياً</th>
+                            <td>يعمل بالكامل</td>
+                            <td class="is-plus">يعمل بالكامل</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="compare__group">
+                            <th scope="rowgroup" colspan="2">الاستخدام اليومي</th>
+                            <td class="is-plus"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">تسجيل المصروف بالصوت</th>
+                            <td><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 12h10"/></svg><span class="sr-only">غير متاح</span></td>
+                            <td class="is-plus"><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span class="sr-only">متاح</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">الودجات الجديدة</th>
+                            <td><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 12h10"/></svg><span class="sr-only">غير متاح</span></td>
+                            <td class="is-plus"><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span class="sr-only">متاح</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">حفظ البيانات</th>
+                            <td>على جهازك</td>
+                            <td class="is-plus">جهازك أو السحابة<small>بمزامنة لحظية</small></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">كل ميزات التطبيق الأساسية</th>
+                            <td>مفتوحة</td>
+                            <td class="is-plus">مفتوحة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--alt">
+        <div class="container faq-split">
+            <div class="faq-split__head" data-reveal>
+                <h2>أسئلة عن الاشتراك</h2>
+                <p>لم تجد إجابتك؟ تصفّح <a href="faq.html">الأسئلة الشائعة</a> أو <a href="contact.html">تواصل معنا</a>.</p>
+            </div>
+            <div class="faq" data-reveal data-reveal-delay="80">
                 <details class="faq__item" open>
-                    <summary>هل سيبقى التطبيق مجانياً؟</summary>
-                    <div class="faq__body">نعم. الخطة الأساسية ستبقى مجانية بشكل دائم، والخطط المدفوعة ستضيف قدرات متقدّمة دون أن تسحب أي ميزة تستخدمها اليوم.</div>
+                    <summary>هل سيبقى فلس مجانياً؟</summary>
+                    <div class="faq__body">نعم. كل ميزات التطبيق الأساسية مفتوحة للجميع ومجانية دائماً، من قراءة الرسائل البنكية وتصنيفها إلى ميزانية الصفر. بلس يضيف أدوات متقدّمة فوقها، دون أن يسحب شيئاً مما تستخدمه اليوم.</div>
                 </details>
                 <details class="faq__item">
-                    <summary>هل أحتاج بطاقة ائتمانية للتسجيل؟</summary>
-                    <div class="faq__body">لا. التسجيل واستخدام الخطة الأساسية لا يتطلبان أي وسيلة دفع.</div>
+                    <summary>كيف أشترك في بلس؟</summary>
+                    <div class="faq__body">من صفحة «فلس بلس» داخل التطبيق: اختر الخطة الشهرية أو السنوية، ثم أكّد الدفع عبر متجر التطبيقات. يتفعّل بلس على حسابك مباشرة.</div>
                 </details>
                 <details class="faq__item">
-                    <summary>متى تُطلق الخطط المدفوعة؟</summary>
-                    <div class="faq__body">نعمل عليها حالياً. من ينضم لقائمة الانتظار سيحصل على إشعار مسبق وعلى سعر إطلاق مخفّض.</div>
+                    <summary>هل يمكنني الإلغاء في أي وقت؟</summary>
+                    <div class="faq__body">نعم، من إعدادات الاشتراكات في متجر التطبيقات. يبقى بلس فعّالاً حتى نهاية الفترة المدفوعة، ثم يعود حسابك إلى الخطة المجانية وتبقى بياناتك كما هي.</div>
                 </details>
                 <details class="faq__item">
-                    <summary>هل يمكنني إلغاء الاشتراك في أي وقت؟</summary>
-                    <div class="faq__body">نعم، دون أي التزام. عند الإلغاء يعود حسابك تلقائياً إلى الخطة الأساسية المجانية وتبقى بياناتك كما هي.</div>
+                    <summary>اشتركت من قبل، كيف أستعيد اشتراكي؟</summary>
+                    <div class="faq__body">على هاتف جديد أو بعد إعادة تثبيت التطبيق، افتح صفحة «فلس بلس» واضغط «استعد اشتراكك». يتعرّف فلس على اشتراكك من حساب المتجر نفسه.</div>
+                </details>
+                <details class="faq__item">
+                    <summary>لماذا يظهر الاشتراك في مصروفاتي؟</summary>
+                    <div class="faq__body">لأن فلس يعامل اشتراكه كأي مصروف آخر. عند كل دفعة مؤكّدة يُضاف قيد تلقائي في مصروفاتك، ويظهر «فلس بلس» في قسم الاشتراكات. يمكنك تعديل القيد أو حذفه كأي مصروف.</div>
+                </details>
+                <details class="faq__item">
+                    <summary>أين تُحفظ بياناتي؟</summary>
+                    <div class="faq__body">أنت تختار: على جهازك فقط، أو على السحابة بمزامنة لحظية تُبقي أجهزتك كلها على الأرقام نفسها.</div>
                 </details>
             </div>
         </div>
@@ -142,8 +421,8 @@
         <div class="container">
             <div class="cta" data-reveal>
                 <img src="images/logo.svg" alt="فلس" class="cta__logo">
-                <h2>ابدأ رحلتك المالية اليوم</h2>
-                <p>حمّل فلس مجاناً، واربطه برسائلك البنكية خلال دقيقة واحدة. لا بطاقة ائتمان، ولا رسوم مخفية.</p>
+                <h2>ابدأ مجاناً، وترقَّ إلى بلس متى شئت</h2>
+                <p>حمّل فلس واربطه برسائلك البنكية خلال دقيقة. الاشتراك في بلس يتم من داخل التطبيق.</p>
                 <div class="stores">
                     <a href="#" class="store" aria-label="حمّل من App Store">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
