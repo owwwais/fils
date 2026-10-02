@@ -1,7 +1,13 @@
 /* =========================================================
    فلس — Design System v2
-   Font: Alexandria
+   Font: Tajarib (stylistic set ss01 — الأحرف المُرسَلة)
    ========================================================= */
+
+@font-face { font-family: 'Tajarib'; src: url('fonts/tajarib-light.woff2') format('woff2');   font-weight: 100 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Tajarib'; src: url('fonts/tajarib-regular.woff2') format('woff2'); font-weight: 400;     font-style: normal; font-display: swap; }
+@font-face { font-family: 'Tajarib'; src: url('fonts/tajarib-medium.woff2') format('woff2');  font-weight: 500;     font-style: normal; font-display: swap; }
+@font-face { font-family: 'Tajarib'; src: url('fonts/tajarib-bold.woff2') format('woff2');    font-weight: 600 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Tajarib'; src: url('fonts/tajarib-black.woff2') format('woff2');   font-weight: 800 900; font-style: normal; font-display: swap; }
 
 :root {
     color-scheme: light;
@@ -63,7 +69,7 @@
     --nav-h: 74px;
     --maxw: 1180px;
 
-    --font: 'Alexandria', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font: 'Tajarib', 'Segoe UI', system-ui, -apple-system, sans-serif;
     --ease: cubic-bezier(.22, 1, .36, 1);
     --t: .28s var(--ease);
 }
@@ -104,7 +110,8 @@ html {
 
 body {
     font-family: var(--font);
-    font-weight: 300;
+    font-feature-settings: "ss01" 1;
+    font-weight: 400;
     background: var(--bg);
     color: var(--text);
     line-height: 1.8;
