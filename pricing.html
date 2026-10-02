@@ -31,7 +31,7 @@
     <!-- ===== HEADER ===== -->
     <header class="header">
         <nav class="nav container" aria-label="التنقل الرئيسي">
-            <a href="index.html" class="nav__logo" aria-label="فلس — الصفحة الرئيسية">
+            <a href="index.html" class="nav__logo" aria-label="فلس، الصفحة الرئيسية">
                 <img src="images/logo.svg" alt="">
                 <span>فلس</span>
             </a>
@@ -77,30 +77,18 @@
                 </div>
             </div>
 
-            <div class="plus-hero__visual" data-reveal data-reveal-delay="120">
+            <div class="stage stage--soft" data-reveal data-reveal-delay="120">
                 <div class="pass-stage" data-tilt>
-                    <div class="pass-float">
-                        <div class="pass pass--back" aria-hidden="true"></div>
-                        <div class="pass pass--front" role="img" aria-label="بطاقة عضوية فلس بلس السنوية">
-                            <span class="pass__sheen"></span>
-                            <div class="pass__row" aria-hidden="true">
-                                <span class="pass__brand"><img src="images/logo.svg" alt="">فلس</span>
-                                <span class="pass__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-                            </div>
-                            <div class="pass__row" aria-hidden="true">
-                                <span class="pass__name"><small>عضوية</small>بلس</span>
-                                <span class="pass__meta">العضوية السنوية<b>شهران مجاناً</b></span>
-                            </div>
+                    <div class="pass pass--front" role="img" aria-label="بطاقة عضوية فلس بلس السنوية">
+                        <span class="pass__sheen"></span>
+                        <div class="pass__row" aria-hidden="true">
+                            <span class="pass__brand"><img src="images/logo.svg" alt="">فلس</span>
+                            <span class="pass__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
                         </div>
-                    </div>
-
-                    <div class="device__chip pass-chip--a" aria-hidden="true">
-                        <i class="i-mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></i>
-                        <div><b>«دفعت 32 ريال غداء»</b><small>سُجّل في المطاعم</small></div>
-                    </div>
-                    <div class="device__chip pass-chip--b" aria-hidden="true">
-                        <i class="i-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.7 8l4.5 1.7-4.5 1.7L12 16l-1.7-4.6L5.8 9.7 10.3 8z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></i>
-                        <div><b>300 سؤال شهرياً</b><small>للمستشار المالي الذكي</small></div>
+                        <div class="pass__row" aria-hidden="true">
+                            <span class="pass__name display"><small>عضوية</small>بلس</span>
+                            <span class="pass__meta">العضوية السنوية<b>شهران مجاناً</b></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -415,20 +403,21 @@
         </div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <!-- ===== DOWNLOAD ===== -->
     <section class="section" id="download">
         <div class="container">
             <div class="cta" data-reveal>
-                <img src="images/logo.svg" alt="فلس" class="cta__logo">
-                <h2>ابدأ مجاناً، وترقَّ إلى بلس متى شئت</h2>
-                <p>حمّل فلس واربطه برسائلك البنكية خلال دقيقة. الاشتراك في بلس يتم من داخل التطبيق.</p>
+                <div>
+                    <h2>ابدأ مجاناً، وترقَّ إلى بلس متى شئت</h2>
+                    <p>حمّل فلس واربطه برسائلك البنكية خلال دقيقة. الاشتراك في بلس يتم من داخل التطبيق.</p>
+                </div>
                 <div class="stores">
                     <a href="#" class="store" aria-label="حمّل من App Store">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                         <div><small>حمّل من</small><strong>App Store</strong></div>
                     </a>
                     <a href="#" class="store" aria-label="حمّل من Google Play">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.67c-.3-.18-.55-.52-.55-.97V1.3c0-.45.25-.79.55-.97l11.25 11.67L3.18 23.67zM15.47 13.05L5.08 23.44l12.85-7.2-2.46-3.19zm2.93-1.62l-2.19 1.24L18.68 16l3.34-1.87c.6-.34.6-.89 0-1.23l-3.62-2.47zM5.08.56l10.39 10.4 2.46-2.55L5.08.56z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.67c-.3-.18-.55-.52-.55-.97V1.3c0-.45.25-.79.55-.97l11.25 11.67L3.18 23.67zM15.47 13.05L5.08 23.44l12.85-7.2-2.46-3.19zm2.93-1.62l-2.19 1.24L18.68 16l3.34-1.87c.6-.34.6-.89 0-1.23l-3.62-2.47zM5.08.56l10.39 10.4 2.46-2.55L5.08.56z"/></svg>
                         <div><small>حمّل من</small><strong>Google Play</strong></div>
                     </a>
                 </div>
