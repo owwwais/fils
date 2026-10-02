@@ -91,6 +91,36 @@
             });
         });
 
+        /* ---------- Plus pass: tilt toward the pointer ---------- */
+        var stage = document.querySelector('[data-tilt]');
+        var canTilt = window.matchMedia &&
+            window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (stage && canTilt) {
+            var pass = stage.querySelector('.pass--front');
+            var frame = 0;
+            var setTilt = function (x, y) {
+                pass.style.setProperty('--ry', (x * 16).toFixed(2) + 'deg');
+                pass.style.setProperty('--rx', (y * -12).toFixed(2) + 'deg');
+                pass.style.setProperty('--sx', (x * 70).toFixed(1) + '%');
+            };
+            stage.addEventListener('pointermove', function (e) {
+                var r = stage.getBoundingClientRect();
+                var x = (e.clientX - r.left) / r.width - 0.5;
+                var y = (e.clientY - r.top) / r.height - 0.5;
+                stage.classList.add('is-tilting');
+                cancelAnimationFrame(frame);
+                frame = requestAnimationFrame(function () { setTilt(x, y); });
+            });
+            stage.addEventListener('pointerleave', function () {
+                cancelAnimationFrame(frame);
+                stage.classList.remove('is-tilting');
+                pass.style.removeProperty('--rx');
+                pass.style.removeProperty('--ry');
+                pass.style.removeProperty('--sx');
+            });
+        }
+
         /* ---------- Contact form (front-end only) ---------- */
         var form = document.querySelector('[data-contact-form]');
         if (form) {
